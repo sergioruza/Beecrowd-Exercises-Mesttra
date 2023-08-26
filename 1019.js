@@ -12,7 +12,7 @@ const obj = {
   h: 0,
   m: 0,
   s: 0
-}
+};
 
 obj.h = Math.floor(resto / 3600);
 resto %= 3600;

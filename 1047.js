@@ -6,8 +6,8 @@ var lines = input.split('\n');
 
 const [A, B, C, D] = lines[0].split(' ').map((e) => Number(e));
 
-const inicial = A * 60 + B; // 428
-const final = C * 60 + D; // 550
+const inicial = A * 60 + B;
+const final = C * 60 + D;
 
 let diferenca = final - inicial;
 

@@ -3,6 +3,7 @@ const currentFile = path.dirname(process.argv[1]);
 
 var input = require('fs').readFileSync(currentFile + '/dev/stdin', 'utf8');
 var lines = input.split('\n');
+const casos = +lines[0];
 
 const numeros = lines.map((e) => Number(e));
 
@@ -26,7 +27,7 @@ numeros.shift();
 //   } 
 // })
 
-for (let i = 0; i < numeros.length; i++) {
+for (let i = 0; i < casos; i++) {
   const num = numeros[i];
 
   if (num === 0) {

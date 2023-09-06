@@ -1,8 +1,17 @@
 let I = 1;
-let J = 60;
+let J = 7;
 
-while (J >= 0) {
+let count = 1;
+
+while (I <= 9) {
   console.log(`I=${I} J=${J}`);
-  I += 3;
-  J -= 5;
+
+  if (count === 3) {
+    count = 1;
+    I += 2;
+    J = 7
+  } else {
+    count += 1
+    J -= 1
+  }
 }

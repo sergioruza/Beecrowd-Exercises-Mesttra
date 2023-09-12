@@ -6,11 +6,10 @@ var lines = input.split('\n');
 
 const casos = Number(lines[0]);
 
-let contador = 1;
-let contadorNumero = 0
+for (let i = 1; i <= casos; i++) {
+  let quadrado = i * i;
+  let cubo = Math.pow(i, 3);
 
-while (contador <= casos) {
-  if (contadorNumero === 2) {
-    contador += 1;
-  }
+  console.log(`${i} ${quadrado} ${cubo}`);
+  console.log(`${i} ${quadrado + 1} ${cubo + 1}`);
 }

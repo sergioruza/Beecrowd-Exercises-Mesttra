@@ -7,30 +7,6 @@ var lines = input.split('\n').map((e) => e.split(' ').map((e) => Number(e)));
 const happy = ':)';
 const sad = ':(';
 
-// for (let i = 0; i < lines.length; i += 1) {
-//   const [first, second, third] = lines[i];
-
-//   if (first > second && second <= third) {
-//     console.log(happy);
-//   } else if (first < second && second >= third) {
-//     console.log(sad);
-//   } else if (first < second && second < third && (second - first) > (third - second)) {
-//     console.log(sad);
-//   } else if (first < second && second < third && (second - first) <= (third - second)) {
-//     console.log(happy);
-//   } else if (first > second && second > third && (first - second) > (second - third)) {
-//     console.log(happy);
-//   } else if (first > second && second > third && (first - second) <= (second - third)) {
-//     console.log(sad);
-//   } else if (first === second) {
-//     if (second < third) {
-//       console.log(happy);
-//     } else {
-//       console.log(sad);
-//     }
-//   }
-// }
-
 lines.forEach((e) => {
   const [first, second, third] = e;
 

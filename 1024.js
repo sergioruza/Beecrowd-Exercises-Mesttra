@@ -6,23 +6,38 @@ var lines = input.split('\n');
 
 const cases = Number(lines.shift());
 
-function firstStadium(pass) {
-  const newPassCrypt = '';
-
-  for (let i = 0; i < pass.length; i += 1) {
-    const char = pass.charAt(i);
-
-    const regex = /[a-z]/;
-    if (regex.test(char)) {
-      
+function firstStage(pass) {
+  const newPassCrypt = pass.split('').map(char => {
+    if (/[a-zA-Z]/.test(char)) {
+        return String.fromCharCode((char.charCodeAt(0) + 3));
     }
+    return char;
+  });
+  
+  return newPassCrypt;
+}
+
+function thirdStage(pass) {
+  const arrayPass = [...pass];
+  const half = Math.floor(pass.length / 2);
+
+  for (let i = half; i < pass.length; i += 1) {
+    const char = arrayPass[i];
+    const newChar = String.fromCharCode((char.charCodeAt(0) - 1));
+    arrayPass[i] = newChar
   }
+
+  return arrayPass;
 }
 
 for (let i = 0; i < cases; i += 1) {
   const password = lines[i];
 
+  const passStageOne = firstStage(password);
 
+  const passStageTwo = passStageOne.reverse();
+
+  const passStageThree = thirdStage(passStageTwo)
+
+  console.log(passStageThree.join(''));
 }
-
-console.log("ABC".charCodeAt(0));

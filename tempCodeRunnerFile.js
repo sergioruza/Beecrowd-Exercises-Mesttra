@@ -1,1 +1,1 @@
-cur
+rods[i] + rods[i + 1]

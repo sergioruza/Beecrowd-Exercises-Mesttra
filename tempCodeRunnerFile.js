@@ -1,1 +1,1 @@
-rods[i] + rods[i + 1]
+pipe - nextPipe
